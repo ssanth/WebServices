@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://javaproj.topalgos.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://javaproj.topalgos.com" xmlns:intf="http://javaproj.topalgos.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://javaproj.topalgos.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getHTMLUnivesityInfo">
+    <complexType/>
+   </element>
+   <element name="getHTMLUnivesityInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="getHTMLUnivesityInfoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHTMLUnivesityInfo">
+    <complexType>
+     <sequence>
+      <element name="value1" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHTMLUnivesityInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="setHTMLUnivesityInfoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getHTMLUnivesityInfoRequest">
+
+      <wsdl:part element="impl:getHTMLUnivesityInfo" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHTMLUnivesityInfoRequest">
+
+      <wsdl:part element="impl:setHTMLUnivesityInfo" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHTMLUnivesityInfoResponse">
+
+      <wsdl:part element="impl:getHTMLUnivesityInfoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHTMLUnivesityInfoResponse">
+
+      <wsdl:part element="impl:setHTMLUnivesityInfoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="UniversityWSREST">
+
+      <wsdl:operation name="getHTMLUnivesityInfo">
+
+         <wsdl:input message="impl:getHTMLUnivesityInfoRequest" name="getHTMLUnivesityInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHTMLUnivesityInfoResponse" name="getHTMLUnivesityInfoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHTMLUnivesityInfo">
+
+         <wsdl:input message="impl:setHTMLUnivesityInfoRequest" name="setHTMLUnivesityInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setHTMLUnivesityInfoResponse" name="setHTMLUnivesityInfoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="UniversityWSRESTSoapBinding" type="impl:UniversityWSREST">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getHTMLUnivesityInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHTMLUnivesityInfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHTMLUnivesityInfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHTMLUnivesityInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setHTMLUnivesityInfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setHTMLUnivesityInfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="UniversityWSRESTService">
+
+      <wsdl:port binding="impl:UniversityWSRESTSoapBinding" name="UniversityWSREST">
+
+         <wsdlsoap:address location="http://localhost:8080/CalculatorWSRest/services/UniversityWSREST"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
